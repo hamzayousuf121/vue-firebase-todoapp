@@ -73,7 +73,7 @@ export default {
   },
 
   mounted(){
-    axios.get("https://vue-pwa-todoapp.firebaseio.com/todos.json")
+    axios.get("apiurl")
       .then(response => {
         this.todos = response.data;
       })
@@ -81,7 +81,7 @@ export default {
   },
   
   updated() {
-    axios.get("https://vue-pwa-todoapp.firebaseio.com/todos.json")
+    axios.get("apiurl")
       .then(response => {
         this.todos = response.data;
       })
